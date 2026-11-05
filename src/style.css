@@ -1,0 +1,168 @@
+:root {
+  --text-color: #f4e9d0;
+  --tapete-color: #1e5c3a;
+  --background-color: #1a0f0f;
+  --danger-color: #b3282d;
+  --danger-dark-color: #8b1f23;
+  --accent-color: #e8b83c;
+  --font-family: "Tiny5 Duo", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.titulo {
+  font-weight: 500;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 2rem; 
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+  text-shadow: 5px 5px 0px var(--danger-dark-color), 10px 10px 0px var(--danger-color);
+}
+
+.subtitulo {
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;   
+}
+
+.puntos{
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#result{
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.dado{
+  image-rendering: pixelated;
+  width: 80px;
+  height: 80px;
+  animation: float 1s steps(1) infinite alternate;
+}
+
+.dado:nth-child(2){
+  animation-delay: 0.5s;
+}
+
+.dado:nth-child(3){
+  animation-delay: 1s;
+}
+
+.betInput{
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid var(--accent-color);
+  color: var(--text-color);
+  outline: none;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+}
+
+.throwDiceButton{
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: var(--accent-color) 1px solid;
+  background-color: var(--danger-color);
+  color: var(--accent-color); 
+  cursor: pointer;
+  font-family: var(--font-family);
+  box-shadow: 0 4px 0 var(--accent-color);
+}
+
+.throwDiceButton:hover{
+  background-color: var(--accent-color);
+  color: var(--danger-color);
+}
+
+.throwDiceButton:active{
+  background-color: var(--danger-color);
+  color: var(--accent-color);
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+
+
+.throwDiceButton:disabled{
+  background-color: var(--background-color);
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.tapete {
+  background-color: var(--tapete-color);
+  padding: 3rem;
+  margin: 1rem auto;
+  width: 25rem;
+  max-width: 90%;
+  min-height: 20rem;
+  display: flex;
+  border: 5px solid var(--accent-color);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.tapete-dados {
+  display: flex;
+  gap: 1rem;
+}
+
+.controles {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.jackpot {
+  animation: macarrones 0.4s infinite alternate;
+}
+
+@keyframes float {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-5px); } 
+}
+
+@keyframes macarrones {
+  from { background-color: var(--tapete-color); }
+  to   { background-color: var(--accent-color); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dado {
+    animation: none;
+  }
+  .jackpot {
+    animation: none;
+  }
+}
+

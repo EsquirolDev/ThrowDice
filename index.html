@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DiceThrow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiny5+Duo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+      <h1 class="titulo">Dice Throw</h1>
+      <p class="subtitulo">Prueba tu suerte...</p>
+      <p class="puntos">Puntos: <span id="counter">10</span></p>
+      
+
+      <div class="tapete">
+        <p id="result"></p>
+        <div class="tapete-dados">
+          <img class="dado" id="dice1" src="assets/dado1.png" alt="Dado 1" />
+          <img class="dado" id="dice2" src="assets/dado2.png" alt="Dado 2" />
+          <img class="dado" id="dice3" src="assets/dado3.png" alt="Dado 3" />
+        </div>
+      </div>
+
+      <div class="controles">
+        <input class="betInput" type="text" placeholder="Introducir apuesta" id="betInput" />
+        <button class="throwDiceButton" id="throwDiceButton">Tirar dados</button>
+      </div>
+
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
