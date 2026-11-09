@@ -12,6 +12,13 @@
   box-sizing: border-box;
 }
 
+#app{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center
+}
+
 body {
   margin: 0;
   background-color: var(--background-color);
@@ -145,6 +152,37 @@ body {
 
 .jackpot {
   animation: macarrones 0.4s infinite alternate;
+}
+
+footer{
+  width: 100%;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer a{
+  text-decoration: none;
+  color: var(--accent-color);
+  margin-bottom: 0rem;
+}
+
+footer span{
+  color: var(--text-color);
+}
+
+.subfooter{
+  display: inline-block;
+  color: var(--text-color);
+  margin-top: 0.4rem;
+}
+
+.subfooter:hover{
+  color: var(--accent-color);
+  transform: translateY(-2px);
 }
 
 @keyframes float {
